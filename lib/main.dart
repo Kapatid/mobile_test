@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_test/login_page/login_page_widget.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -25,7 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const LoginPageWidget(),
+      home: const MyHomePage(title: 'Hello World!'),
     );
   }
 }
