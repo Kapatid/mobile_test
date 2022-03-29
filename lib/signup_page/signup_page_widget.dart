@@ -1,8 +1,5 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../flutter_flow/flutter_flow_theme.dart';
-// import '../flutter_flow/flutter_flow_util.dart';
-// import 'package:google_fonts/google_fonts.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -54,14 +51,16 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(30, 100, 30, 0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            30, 100, 30, 0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Icon(
                               Icons.person_add_alt,
-                              color: FlutterFlowTheme.of(context).primaryBackground,
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
                               size: 64,
                             ),
                             Text(
@@ -104,8 +103,8 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding:
-                              const EdgeInsetsDirectional.fromSTEB(30, 60, 30, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              30, 60, 30, 0),
                           child: TextFormField(
                             controller: textSignupFirstNameController,
                             obscureText: false,
@@ -143,8 +142,9 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                               ),
                               filled: true,
                               fillColor: Colors.white,
-                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  24, 24, 20, 24),
+                              contentPadding:
+                                  const EdgeInsetsDirectional.fromSTEB(
+                                      24, 24, 20, 24),
                             ),
                             style:
                                 FlutterFlowTheme.of(context).bodyText1.override(
@@ -156,8 +156,8 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding:
-                              const EdgeInsetsDirectional.fromSTEB(30, 20, 30, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              30, 20, 30, 0),
                           child: TextFormField(
                             controller: textSignupLastNameController,
                             obscureText: false,
@@ -195,8 +195,9 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                               ),
                               filled: true,
                               fillColor: Colors.white,
-                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  24, 24, 20, 24),
+                              contentPadding:
+                                  const EdgeInsetsDirectional.fromSTEB(
+                                      24, 24, 20, 24),
                             ),
                             style:
                                 FlutterFlowTheme.of(context).bodyText1.override(
@@ -208,8 +209,8 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding:
-                              const EdgeInsetsDirectional.fromSTEB(30, 20, 30, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              30, 20, 30, 0),
                           child: TextFormField(
                             controller: textSignupEmailController,
                             obscureText: false,
@@ -247,8 +248,9 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                               ),
                               filled: true,
                               fillColor: Colors.white,
-                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  24, 24, 20, 24),
+                              contentPadding:
+                                  const EdgeInsetsDirectional.fromSTEB(
+                                      24, 24, 20, 24),
                             ),
                             style:
                                 FlutterFlowTheme.of(context).bodyText1.override(
@@ -261,8 +263,8 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding:
-                              const EdgeInsetsDirectional.fromSTEB(30, 20, 30, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              30, 20, 30, 0),
                           child: TextFormField(
                             controller: textSignupPasswordController,
                             obscureText: !textSignupPasswordVisibility,
@@ -300,8 +302,9 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                               ),
                               filled: true,
                               fillColor: Colors.white,
-                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  24, 24, 20, 24),
+                              contentPadding:
+                                  const EdgeInsetsDirectional.fromSTEB(
+                                      24, 24, 20, 24),
                               suffixIcon: InkWell(
                                 onTap: () => setState(
                                   () => textSignupPasswordVisibility =
@@ -326,7 +329,8 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(30, 10, 30, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              30, 10, 30, 0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -342,7 +346,8 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    10, 0, 0, 0),
                                 child: InkWell(
                                   onTap: () async {
                                     // Action Go LoginPage
@@ -350,7 +355,9 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                   },
                                   child: Text(
                                     'Already have an account?',
-                                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
                                           fontFamily: 'Poppins',
                                           fontSize: 12,
                                           fontWeight: FontWeight.normal,
@@ -362,7 +369,8 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                           child: FFButtonWidget(
                             onPressed: () {
                               print('Button pressed ...');

@@ -1,7 +1,6 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../flutter_flow/flutter_flow_theme.dart';
-// import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../signup_page/signup_page_widget.dart';
 import 'package:flutter/material.dart';
@@ -53,7 +52,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                       Align(
                         alignment: const AlignmentDirectional(-0.05, 0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(30, 190, 30, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              30, 190, 30, 0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -61,15 +61,19 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                             children: [
                               Text(
                                 'LOGIN',
-                                style: FlutterFlowTheme.of(context).bodyText1.override(
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
                                       fontFamily: 'Montserrat',
-                                      color: FlutterFlowTheme.of(context).primaryBackground,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
                                       fontSize: 50,
                                     ),
                               ),
                               Icon(
                                 Icons.login,
-                                color: FlutterFlowTheme.of(context).primaryBackground,
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
                                 size: 64,
                               ),
                             ],
@@ -97,8 +101,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding:
-                              const EdgeInsetsDirectional.fromSTEB(30, 60, 30, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              30, 60, 30, 0),
                           child: TextFormField(
                             controller: textEmailController,
                             obscureText: false,
@@ -136,8 +140,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                               ),
                               filled: true,
                               fillColor: Colors.white,
-                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  24, 24, 20, 24),
+                              contentPadding:
+                                  const EdgeInsetsDirectional.fromSTEB(
+                                      24, 24, 20, 24),
                             ),
                             style:
                                 FlutterFlowTheme.of(context).bodyText1.override(
@@ -150,8 +155,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding:
-                              const EdgeInsetsDirectional.fromSTEB(30, 20, 30, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              30, 20, 30, 0),
                           child: TextFormField(
                             controller: textPasswordController,
                             obscureText: !textPasswordVisibility,
@@ -189,8 +194,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                               ),
                               filled: true,
                               fillColor: Colors.white,
-                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  24, 24, 20, 24),
+                              contentPadding:
+                                  const EdgeInsetsDirectional.fromSTEB(
+                                      24, 24, 20, 24),
                               suffixIcon: InkWell(
                                 onTap: () => setState(
                                   () => textPasswordVisibility =
@@ -215,26 +221,31 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(30, 10, 30, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              30, 10, 30, 0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0, 0, 5, 0),
                                 child: InkWell(
                                   onTap: () async {
                                     // Action Go SignupPage
                                     await Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => const SignupPageWidget(),
+                                        builder: (context) =>
+                                            const SignupPageWidget(),
                                       ),
                                     );
                                   },
                                   child: Text(
                                     'Need an account?',
-                                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
                                           fontFamily: 'Poppins',
                                           fontSize: 12,
                                           fontWeight: FontWeight.normal,
@@ -248,13 +259,15 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                   await Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => const SignupPageWidget(),
+                                      builder: (context) =>
+                                          const SignupPageWidget(),
                                     ),
                                   );
                                 },
                                 child: FaIcon(
                                   FontAwesomeIcons.longArrowAltRight,
-                                  color: FlutterFlowTheme.of(context).primaryText,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
                                   size: 24,
                                 ),
                               ),
@@ -262,7 +275,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
                           child: FFButtonWidget(
                             onPressed: () {
                               print('btn_login pressed ...');
