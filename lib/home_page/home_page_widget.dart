@@ -12,18 +12,7 @@ class HomePageWidget extends StatefulWidget {
 }
 
 class _HomePageWidgetState extends State<HomePageWidget> {
-  late TextEditingController textEmailController;
-  late TextEditingController textPasswordController;
-  late bool textPasswordVisibility;
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  @override
-  void initState() {
-    super.initState();
-    textEmailController = TextEditingController();
-    textPasswordController = TextEditingController();
-    textPasswordVisibility = false;
-  }
 
   @override
   Widget build(BuildContext context) {

@@ -1,3 +1,3 @@
-# mobile_test
+# Gallery Design
 
-A new Flutter project.
+Simple gallery design for a course.
