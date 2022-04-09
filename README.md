@@ -1,3 +1,3 @@
-# mobile_test
+# Authentication Design
 
-A new Flutter project.
+Simple Login & Signup designs for a course.
