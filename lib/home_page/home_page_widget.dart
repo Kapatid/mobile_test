@@ -1,10 +1,10 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/material.dart';
+import 'package:mobile_test/flutter_flow/flutter_flow_util.dart';
 import 'package:mobile_test/products_grid/products_grid_widget.dart';
 import 'package:mobile_test/widgets/custom_tab_indicator.dart';
-
-import '../flutter_flow/flutter_flow_theme.dart';
-import 'package:flutter/material.dart';
+import 'package:mobile_test/flutter_flow/flutter_flow_theme.dart';
 
 class HomePageWidget extends StatefulWidget {
   const HomePageWidget({Key? key}) : super(key: key);
@@ -14,6 +14,7 @@ class HomePageWidget extends StatefulWidget {
 
 class _HomePageWidgetState extends State<HomePageWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  final _fc = NumberFormat.simpleCurrency(locale: 'en_US', name: 'PHP');
 
   @override
   Widget build(BuildContext context) {
@@ -65,8 +66,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               const Text("Sub Total",
                                                   style: TextStyle(
                                                       color: Colors.grey)),
-                                              Text("₱ 0",
-                                                  style: GoogleFonts.roboto())
+                                              Text(
+                                                _fc.format(0),
+                                                style: TextStyle(
+                                                    fontFamily: "Roboto",
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondaryColor),
+                                              )
                                             ],
                                           ),
                                         ),
@@ -79,8 +86,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               const Text("Shipping",
                                                   style: TextStyle(
                                                       color: Colors.grey)),
-                                              Text("₱ 0",
-                                                  style: GoogleFonts.roboto())
+                                              Text(
+                                                _fc.format(0),
+                                                style: TextStyle(
+                                                    fontFamily: "Roboto",
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondaryColor),
+                                              )
                                             ],
                                           ),
                                         ),
@@ -93,8 +106,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               const Text("Tax",
                                                   style: TextStyle(
                                                       color: Colors.grey)),
-                                              Text("₱ 0",
-                                                  style: GoogleFonts.roboto())
+                                              Text(
+                                                _fc.format(0),
+                                                style: TextStyle(
+                                                    fontFamily: "Roboto",
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondaryColor),
+                                              )
                                             ],
                                           ),
                                         ),
@@ -111,8 +130,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     fontWeight:
                                                         FontWeight.w900),
                                               ),
-                                              Text("₱ 0",
-                                                  style: GoogleFonts.roboto())
+                                              Text(
+                                                _fc.format(0),
+                                                style: TextStyle(
+                                                    fontFamily: "Roboto",
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondaryColor),
+                                              )
                                             ],
                                           ),
                                         ),

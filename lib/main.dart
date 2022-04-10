@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/details': (context) => const DetailsPage(),
+        '/details': (context) => DetailsPage(),
       },
       title: 'Gallery Design',
       theme: ThemeData(

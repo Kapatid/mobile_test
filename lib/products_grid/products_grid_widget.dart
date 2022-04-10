@@ -1,10 +1,29 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_test/details_page/details_page_widget.dart';
 import 'package:mobile_test/flutter_flow/flutter_flow_theme.dart';
 import 'package:mobile_test/models/product.dart';
+
+import '../flutter_flow/flutter_flow_util.dart';
+
+Route _createRoute(Widget page) {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => page,
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(1.0, 0.0);
+      const end = Offset.zero;
+      const curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
 
 class ProductsGrid extends StatefulWidget {
   const ProductsGrid({Key? key}) : super(key: key);
@@ -17,6 +36,8 @@ class _ProductsGridState extends State<ProductsGrid> {
   List<Product> _searchList = [];
 
   final TextEditingController _searchController = TextEditingController();
+  final _formatCurrency =
+      NumberFormat.simpleCurrency(locale: 'en_US', name: 'PHP');
 
   @override
   void initState() {
@@ -114,12 +135,8 @@ class _ProductsGridState extends State<ProductsGrid> {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) =>
-                      DetailsPage(product: _searchList[index]),
-                ),
+              Navigator.of(context).push(
+                _createRoute(DetailsPage(product: _searchList[index])),
               );
             },
             child: Card(
@@ -158,16 +175,11 @@ class _ProductsGridState extends State<ProductsGrid> {
                                     fontSize: 12,
                                   ),
                             )),
-                            Row(children: [
-                              Text(
-                                "₱ ",
-                                style: GoogleFonts.roboto(),
-                              ),
-                              Text(
-                                _searchList[index].price.toString(),
-                                style: const TextStyle(fontSize: 12),
-                              )
-                            ])
+                            Text(
+                              _formatCurrency.format(_searchList[index].price),
+                              style: const TextStyle(
+                                  fontSize: 12, fontFamily: "Roboto"),
+                            )
                           ],
                         ),
                       ),
