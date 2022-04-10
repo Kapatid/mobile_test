@@ -1,5 +1,6 @@
 class Product {
   final String image;
   final String name;
-  Product(this.image, this.name);
+  final double price;
+  Product(this.image, this.name, this.price);
 }

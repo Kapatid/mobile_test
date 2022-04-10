@@ -1,93 +1,204 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_test/details_page/details_page_widget.dart';
-import '../models/product.dart';
+import 'package:mobile_test/flutter_flow/flutter_flow_theme.dart';
+import 'package:mobile_test/models/product.dart';
 
-class ProductsGrid extends StatelessWidget {
-  final List<Product> _items = [
-    Product(
-        "https://images.pexels.com/photos/1772973/pexels-photo-1772973.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "Stephan Seeber"),
-    Product(
-        "https://images.pexels.com/photos/1758531/pexels-photo-1758531.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "Liam Gant"),
-    Product(
-        "https://images.pexels.com/photos/1130847/pexels-photo-1130847.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "Stephan Seeber"),
-    Product(
-        "https://images.pexels.com/photos/45900/landscape-scotland-isle-of-skye-old-man-of-storr-45900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "Pixabay"),
-    Product(
-        "https://images.pexels.com/photos/165779/pexels-photo-165779.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "Scott Webb"),
-    Product(
-        "https://images.pexels.com/photos/548264/pexels-photo-548264.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "Krivec Ales"),
-    Product(
-        "https://images.pexels.com/photos/188973/matterhorn-alpine-zermatt-mountains-188973.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "Pixabay"),
-    Product(
-        "https://images.pexels.com/photos/795188/pexels-photo-795188.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "Melanie Wupper"),
-    Product(
-        "https://images.pexels.com/photos/5222/snow-mountains-forest-winter.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "Jaymantri"),
-    Product(
-        "https://images.pexels.com/photos/789381/pexels-photo-789381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "Riciardus"),
-    Product(
-        "https://images.pexels.com/photos/326119/pexels-photo-326119.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "Pixabay"),
-    Product(
-        "https://images.pexels.com/photos/707344/pexels-photo-707344.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "Eberhard"),
-    Product(
-        "https://images.pexels.com/photos/691034/pexels-photo-691034.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "Mirsad Mujanovic"),
-    Product(
-        "https://images.pexels.com/photos/655676/pexels-photo-655676.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "Vittorio Staffolani"),
-    Product(
-        "https://images.pexels.com/photos/592941/pexels-photo-592941.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "Tobi"),
-  ];
+class ProductsGrid extends StatefulWidget {
+  const ProductsGrid({Key? key}) : super(key: key);
+  @override
+  _ProductsGridState createState() => _ProductsGridState();
+}
 
-  ProductsGrid({Key? key}) : super(key: key);
+class _ProductsGridState extends State<ProductsGrid> {
+  final List<Product> _productList = [];
+  List<Product> _searchList = [];
+
+  final TextEditingController _searchController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _productList.add(Product("https://source.unsplash.com/2cFZ_FB08UM/640x426",
+        "Digital Watch", 500.00));
+    _productList.add(Product("https://source.unsplash.com/KsLPTsYaqIQ/640x426",
+        "One Step 2", 1000.0));
+    _productList.add(Product("https://source.unsplash.com/ZtxED1cpB1E/640x426",
+        "Wireless Mouse", 2000.0));
+    _productList.add(Product("https://source.unsplash.com/dUx0gwLbhzs/640x426",
+        "Playstation", 14000.0));
+    _productList.add(Product("https://source.unsplash.com/mwytIca3qNA/640x426",
+        "Playstation Controller", 4000.0));
+    _productList.add(Product("https://source.unsplash.com/IJjfPInzmdk/640x426",
+        "Puma Sneakers", 6000.0));
+    _productList.add(Product(
+        "https://source.unsplash.com/rI2MXeP6sss/640x426", "Airpods", 5000.0));
+    _productList.add(Product("https://source.unsplash.com/cOJgO4Zzs-w/640x426",
+        "Nike Shoes", 16000.0));
+    _productList.add(Product(
+        "https://source.unsplash.com/WCbHuYngg44/640x426", "Watch", 20000.0));
+    _productList.add(Product("https://source.unsplash.com/pHqt1DsHCx0/640x426",
+        "Marshal Headphones", 15000.0));
+    _productList.add(Product("https://source.unsplash.com/y4Atz4olpAQ/640x426",
+        "FOSSIL Watch", 39000.0));
+    _productList.add(Product("https://source.unsplash.com/Rux50ySjahc/640x426",
+        "Nikon Camera", 3000.0));
+    _productList.add(Product(
+        "https://source.unsplash.com/DGyTUaS6_aw/640x426", "GoPro", 18000.0));
+    _productList.add(Product(
+        "https://source.unsplash.com/LtDXRSnNBe0/640x426", "Drone", 12000.0));
+    _productList.add(Product(
+        "https://source.unsplash.com/aWPsyb7-KBQ/640x426", "G Fuel", 1000.0));
+
+    _searchList = _productList;
+
+    _searchController.addListener(() {
+      setState(() {
+        if (_searchController.text.isEmpty) {
+          _searchList = _productList;
+        } else {
+          _searchList = _productList
+              .where((product) => product.name
+                  .toLowerCase()
+                  .contains(_searchController.text.toLowerCase()))
+              .toList();
+        }
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisSpacing: 6,
-          mainAxisSpacing: 6,
-          crossAxisCount: 3,
+    return Column(children: [
+      Container(
+        // Search Box
+        width: MediaQuery.of(context).size.width * 0.90,
+        clipBehavior: Clip.antiAlias,
+        margin: const EdgeInsets.only(bottom: 10),
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(8),
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.grey.withOpacity(0.6),
+                  offset: const Offset(0.0, 2.0),
+                  blurRadius: 5.0)
+            ]),
+        child: TextField(
+          controller: _searchController,
+          decoration: InputDecoration(
+              prefixIcon: const Icon(Icons.search),
+              suffixIcon: Material(
+                color: FlutterFlowTheme.of(context).primaryBackground,
+                child: IconButton(
+                  icon: const Icon(Icons.clear),
+                  onPressed: _searchController.clear,
+                ),
+              ),
+              hintText: 'Search...',
+              border: InputBorder.none),
         ),
-        itemCount: _items.length,
+      ),
+      Expanded(
+          child: GridView.builder(
+        shrinkWrap: true,
+        padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisSpacing: 8,
+          mainAxisSpacing: 8,
+          crossAxisCount: 2,
+        ),
+        itemCount: _searchList.length,
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailsPage(product: _items[index]),
+                  builder: (context) =>
+                      DetailsPage(product: _searchList[index]),
                 ),
               );
             },
-            child: CachedNetworkImage(
-                fit: BoxFit.cover,
-                placeholder: (context, url) => const Center(
-                      child: SizedBox(
-                        width: 40.0,
-                        height: 40.0,
-                        child: CircularProgressIndicator(),
-                      ),
+            child: Card(
+                clipBehavior: Clip.antiAlias,
+                elevation: 4.0,
+                child: Column(
+                  children: [
+                    SizedBox(
+                      child: CachedNetworkImage(
+                          placeholder: (context, url) => const Center(
+                                child: SizedBox(
+                                  width: 40.0,
+                                  height: 40.0,
+                                  child: CircularProgressIndicator(),
+                                ),
+                              ),
+                          errorWidget: (context, url, error) =>
+                              const Icon(Icons.error),
+                          imageUrl: _searchList[index].image),
                     ),
-                errorWidget: (context, url, error) => const Icon(Icons.error),
-                imageUrl: _items[index].image),
+                    Column(children: [
+                      Container(
+                        margin:
+                            const EdgeInsets.only(left: 10, top: 5, right: 10),
+                        alignment: Alignment.centerLeft,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Flexible(
+                                child: Text(
+                              _searchList[index].name,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 12,
+                                  ),
+                            )),
+                            Row(children: [
+                              Text(
+                                "₱ ",
+                                style: GoogleFonts.roboto(),
+                              ),
+                              Text(
+                                _searchList[index].price.toString(),
+                                style: const TextStyle(fontSize: 12),
+                              )
+                            ])
+                          ],
+                        ),
+                      ),
+                      Container(
+                          margin: const EdgeInsets.only(top: 14, right: 10),
+                          height: 30,
+                          alignment: Alignment.centerRight,
+                          child: Wrap(children: [
+                            const Text(
+                              'See Details',
+                              style:
+                                  TextStyle(fontSize: 11, color: Colors.grey),
+                            ),
+                            const SizedBox(
+                              width: 6,
+                            ),
+                            Container(
+                              margin: const EdgeInsets.only(top: 1),
+                              child: const FaIcon(
+                                FontAwesomeIcons.caretRight,
+                                size: 13,
+                                color: Colors.grey,
+                              ),
+                            )
+                          ]))
+                    ]),
+                  ],
+                )),
           );
         },
-      ),
-    );
+      )),
+    ]);
   }
 }

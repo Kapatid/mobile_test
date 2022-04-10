@@ -2,6 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_test/models/product.dart';
 
+import '../flutter_flow/flutter_flow_theme.dart';
+
 class DetailsPage extends StatelessWidget {
   final Product? product;
 
@@ -11,7 +13,8 @@ class DetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(product!.name),
+        backgroundColor: FlutterFlowTheme.of(context).primaryColor,
+        title: const Text("Product Details"),
       ),
       body: Column(
         children: [
