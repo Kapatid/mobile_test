@@ -32,7 +32,23 @@ class ProductsGrid extends StatefulWidget {
 }
 
 class _ProductsGridState extends State<ProductsGrid> {
-  final List<Product> _productList = [];
+  final List<Product> _productList = [
+    Product("2cFZ_FB08UM", "Digital Watch", 500.00),
+    Product("KsLPTsYaqIQ", "One Step 2", 1000.0),
+    Product("ZtxED1cpB1E", "Wireless Mouse", 2000.0),
+    Product("dUx0gwLbhzs", "Playstation", 14000.0),
+    Product("mwytIca3qNA", "Playstation Controller", 4000.0),
+    Product("IJjfPInzmdk", "Puma Sneakers", 6000.0),
+    Product("rI2MXeP6sss", "Airpods", 5000.0),
+    Product("cOJgO4Zzs-w", "Nike Shoes", 16000.0),
+    Product("WCbHuYngg44", "Watch", 20000.0),
+    Product("pHqt1DsHCx0", "Marshal Headphones", 15000.0),
+    Product("y4Atz4olpAQ", "FOSSIL Watch", 39000.0),
+    Product("Rux50ySjahc", "Nikon Camera", 3000.0),
+    Product("DGyTUaS6_aw", "GoPro", 18000.0),
+    Product("LtDXRSnNBe0", "Drone", 12000.0),
+    Product("aWPsyb7-KBQ", "G Fuel", 1000.0),
+  ];
   List<Product> _searchList = [];
 
   final TextEditingController _searchController = TextEditingController();
@@ -42,21 +58,6 @@ class _ProductsGridState extends State<ProductsGrid> {
   @override
   void initState() {
     super.initState();
-    _productList.add(Product("2cFZ_FB08UM", "Digital Watch", 500.00));
-    _productList.add(Product("KsLPTsYaqIQ", "One Step 2", 1000.0));
-    _productList.add(Product("ZtxED1cpB1E", "Wireless Mouse", 2000.0));
-    _productList.add(Product("dUx0gwLbhzs", "Playstation", 14000.0));
-    _productList.add(Product("mwytIca3qNA", "Playstation Controller", 4000.0));
-    _productList.add(Product("IJjfPInzmdk", "Puma Sneakers", 6000.0));
-    _productList.add(Product("rI2MXeP6sss", "Airpods", 5000.0));
-    _productList.add(Product("cOJgO4Zzs-w", "Nike Shoes", 16000.0));
-    _productList.add(Product("WCbHuYngg44", "Watch", 20000.0));
-    _productList.add(Product("pHqt1DsHCx0", "Marshal Headphones", 15000.0));
-    _productList.add(Product("y4Atz4olpAQ", "FOSSIL Watch", 39000.0));
-    _productList.add(Product("Rux50ySjahc", "Nikon Camera", 3000.0));
-    _productList.add(Product("DGyTUaS6_aw", "GoPro", 18000.0));
-    _productList.add(Product("LtDXRSnNBe0", "Drone", 12000.0));
-    _productList.add(Product("aWPsyb7-KBQ", "G Fuel", 1000.0));
 
     _searchList = _productList;
 
