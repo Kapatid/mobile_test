@@ -42,36 +42,21 @@ class _ProductsGridState extends State<ProductsGrid> {
   @override
   void initState() {
     super.initState();
-    _productList.add(Product("https://source.unsplash.com/2cFZ_FB08UM/640x426",
-        "Digital Watch", 500.00));
-    _productList.add(Product("https://source.unsplash.com/KsLPTsYaqIQ/640x426",
-        "One Step 2", 1000.0));
-    _productList.add(Product("https://source.unsplash.com/ZtxED1cpB1E/640x426",
-        "Wireless Mouse", 2000.0));
-    _productList.add(Product("https://source.unsplash.com/dUx0gwLbhzs/640x426",
-        "Playstation", 14000.0));
-    _productList.add(Product("https://source.unsplash.com/mwytIca3qNA/640x426",
-        "Playstation Controller", 4000.0));
-    _productList.add(Product("https://source.unsplash.com/IJjfPInzmdk/640x426",
-        "Puma Sneakers", 6000.0));
-    _productList.add(Product(
-        "https://source.unsplash.com/rI2MXeP6sss/640x426", "Airpods", 5000.0));
-    _productList.add(Product("https://source.unsplash.com/cOJgO4Zzs-w/640x426",
-        "Nike Shoes", 16000.0));
-    _productList.add(Product(
-        "https://source.unsplash.com/WCbHuYngg44/640x426", "Watch", 20000.0));
-    _productList.add(Product("https://source.unsplash.com/pHqt1DsHCx0/640x426",
-        "Marshal Headphones", 15000.0));
-    _productList.add(Product("https://source.unsplash.com/y4Atz4olpAQ/640x426",
-        "FOSSIL Watch", 39000.0));
-    _productList.add(Product("https://source.unsplash.com/Rux50ySjahc/640x426",
-        "Nikon Camera", 3000.0));
-    _productList.add(Product(
-        "https://source.unsplash.com/DGyTUaS6_aw/640x426", "GoPro", 18000.0));
-    _productList.add(Product(
-        "https://source.unsplash.com/LtDXRSnNBe0/640x426", "Drone", 12000.0));
-    _productList.add(Product(
-        "https://source.unsplash.com/aWPsyb7-KBQ/640x426", "G Fuel", 1000.0));
+    _productList.add(Product("2cFZ_FB08UM", "Digital Watch", 500.00));
+    _productList.add(Product("KsLPTsYaqIQ", "One Step 2", 1000.0));
+    _productList.add(Product("ZtxED1cpB1E", "Wireless Mouse", 2000.0));
+    _productList.add(Product("dUx0gwLbhzs", "Playstation", 14000.0));
+    _productList.add(Product("mwytIca3qNA", "Playstation Controller", 4000.0));
+    _productList.add(Product("IJjfPInzmdk", "Puma Sneakers", 6000.0));
+    _productList.add(Product("rI2MXeP6sss", "Airpods", 5000.0));
+    _productList.add(Product("cOJgO4Zzs-w", "Nike Shoes", 16000.0));
+    _productList.add(Product("WCbHuYngg44", "Watch", 20000.0));
+    _productList.add(Product("pHqt1DsHCx0", "Marshal Headphones", 15000.0));
+    _productList.add(Product("y4Atz4olpAQ", "FOSSIL Watch", 39000.0));
+    _productList.add(Product("Rux50ySjahc", "Nikon Camera", 3000.0));
+    _productList.add(Product("DGyTUaS6_aw", "GoPro", 18000.0));
+    _productList.add(Product("LtDXRSnNBe0", "Drone", 12000.0));
+    _productList.add(Product("aWPsyb7-KBQ", "G Fuel", 1000.0));
 
     _searchList = _productList;
 
@@ -118,7 +103,7 @@ class _ProductsGridState extends State<ProductsGrid> {
                   onPressed: _searchController.clear,
                 ),
               ),
-              hintText: 'Search...',
+              hintText: 'Search',
               border: InputBorder.none),
         ),
       ),
