@@ -1,5 +1,4 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_test/flutter_flow/flutter_flow_util.dart';
 import 'package:mobile_test/products_grid/products_grid_widget.dart';
@@ -68,11 +67,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       color: Colors.grey)),
                                               Text(
                                                 _fc.format(0),
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                     fontFamily: "Roboto",
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondaryColor),
+                                                    fontWeight:
+                                                        FontWeight.bold),
                                               )
                                             ],
                                           ),
@@ -88,11 +86,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       color: Colors.grey)),
                                               Text(
                                                 _fc.format(0),
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                     fontFamily: "Roboto",
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondaryColor),
+                                                    fontWeight:
+                                                        FontWeight.bold),
                                               )
                                             ],
                                           ),
@@ -108,11 +105,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       color: Colors.grey)),
                                               Text(
                                                 _fc.format(0),
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                     fontFamily: "Roboto",
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondaryColor),
+                                                    fontWeight:
+                                                        FontWeight.bold),
                                               )
                                             ],
                                           ),
@@ -127,16 +123,17 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               const Text(
                                                 "Total",
                                                 style: TextStyle(
+                                                    fontSize: 20,
                                                     fontWeight:
                                                         FontWeight.w900),
                                               ),
                                               Text(
                                                 _fc.format(0),
-                                                style: TextStyle(
+                                                style: const TextStyle(
+                                                    fontSize: 20,
                                                     fontFamily: "Roboto",
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondaryColor),
+                                                    fontWeight:
+                                                        FontWeight.bold),
                                               )
                                             ],
                                           ),
