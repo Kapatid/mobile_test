@@ -4,5 +4,5 @@ Simple Login & Signup designs for a course.
 
 ## Sample Images
 
-![login.png](./sample/login.png "Login page")
-![signup.png](./sample/signup.png "Signup page")
+[<img src="./sample/login.png" width="250" title="Login Page"/>](image.png)
+[<img src="./sample/signup.png" width="250" title="Signup page"/>](image.png)
