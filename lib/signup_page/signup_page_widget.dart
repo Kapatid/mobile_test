@@ -372,9 +372,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                           padding:
                               const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                           child: FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
+                            onPressed: () {},
                             text: 'Signup',
                             options: FFButtonOptions(
                               width: 150,
@@ -385,7 +383,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                   .override(
                                     fontFamily: 'Lexend Deca',
                                     color: Colors.white,
-                                    fontSize: 14,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.normal,
                                   ),
                               elevation: 2,

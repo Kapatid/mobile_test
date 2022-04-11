@@ -278,10 +278,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                           padding:
                               const EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
                           child: FFButtonWidget(
-                            onPressed: () {
-                              print('btn_login pressed ...');
-                            },
-                            text: 'Login\n',
+                            onPressed: () {},
+                            text: 'Login',
                             options: FFButtonOptions(
                               width: 150,
                               height: 50,
@@ -291,7 +289,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                   .override(
                                     fontFamily: 'Lexend Deca',
                                     color: Colors.white,
-                                    fontSize: 14,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.normal,
                                   ),
                               elevation: 2,
